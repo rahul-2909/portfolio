@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
-}
+    html { scroll-behavior: smooth; }
+    
+    /* Floating programmer code effect */
+    .floating-code {
+      animation: float 8s ease-in-out infinite;
+      opacity: 0.05;
+      font-family: monospace;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    @keyframes float {
+      0%{transform:translateY(0)}
+      50%{transform:translateY(-30px)}
+      100%{transform:translateY(0)}
+    }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+    /* Fade and slide-in animations */
+    .fade-in { animation: fadeIn 1.2s ease-in-out forwards; opacity: 0; }
+    .slide-up { animation: slideUp 1s ease-out forwards; opacity: 0; transform: translateY(40px); }
+    @keyframes fadeIn { to { opacity: 1; } }
+    @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+    /* Background moving lines like a code environment */
+    .matrix-bg {
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0,255,0,0.05) 0px,
+        transparent 1px,
+        transparent 40px
+      );
+      animation: scrollBg 20s linear infinite;
+    }
+    @keyframes scrollBg {
+      0% {background-position: 0 0;}
+      100% {background-position: 0 1000px;}
+    }
