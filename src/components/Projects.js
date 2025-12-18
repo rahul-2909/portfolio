@@ -17,7 +17,7 @@ const Projects = () => (
             <p className="text-gray-700 text-white">Signature App used to make Signature and download Signature easily online without using any login.</p></a>
         </div>
                 <div className=" p-6 bg-gradient-to-br from-black via-gray-900 to-black text-white">
-          <a href="https://illustrious-paprenjak-9a2c68.netlify.app/">
+          <a href="https://wonderlust-9ghn.onrender.com/">
             <h3 className="text-2xl font-bold mb-2">WONDERLUST</h3>
             <p className="text-gray-700 text-white">Wanderlust Full Stack Web App (Inspired by Airbnb) -Built a full-stack travel stay booking platform usingNode.js,
 Express, MongoDB, and React Js.Implemented user authentication, authorization, and secure accesscontrol forlistings and
